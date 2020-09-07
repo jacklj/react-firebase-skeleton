@@ -83,7 +83,8 @@ const Header = () => {
     <>
       <Container>
         <TitleText>
-          React Firebase <Yellow>SKELETON</Yellow>
+          <Yellow>r</Yellow>eact <Yellow>f</Yellow>irebase <Yellow>s</Yellow>
+          keleton
         </TitleText>
 
         {isLoggedIn ? (

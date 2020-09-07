@@ -1,12 +1,12 @@
 # react-firebase skeleton
 
-A skeleton React.js frontend (including routing, state management and basic UI), with Firebase Authentication, Firestore and Hosting.
+Quickly start new web app projects using this skeleton React.js frontend + serverless backend with Firebase Authentication, Firestore and Hosting.
 
 Includes:
 
-- basic responsive UI components: header, form elements, page container
 - routing: `react-router-dom`
 - state management: `redux` + `@reduxjs/toolkit`
+- basic responsive UI components: header, form elements, page container
 - CSS-in-JS: `styled-components`
 - absolute imports (~~`'../../components/Button'`~~ -> `'components/Button'`)
 - auth and firestore state changes are subscribed to - redux store updates automatically (see App.js).

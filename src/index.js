@@ -6,10 +6,8 @@ import { Provider } from 'react-redux';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux';
+import firebaseConfig from './firebaseConfig';
 import './index.css';
-
-const firebaseConfig = {
-};
 
 firebase.initializeApp(firebaseConfig);
 
