@@ -32,8 +32,6 @@ function App() {
   const dispatch = useDispatch();
   const uid = useSelector(selectUid);
 
-  const isLoggedIn = !!uid;
-
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -68,6 +66,7 @@ function App() {
     return () => unsubscribe && unsubscribe();
   }, [dispatch, uid]);
 
+  const isLoggedIn = !!uid;
   // N.B. <Redirect> components auto nav to the specified route (it's "declarative routing").
   return (
     <Router>
