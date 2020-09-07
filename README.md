@@ -29,6 +29,11 @@ npm install -g firebase-tools
 firebase login
 ```
 
-3. fill in firebase credentials (or you can do this using the firebase cli helper)
+3. Create your new firebase project at https://console.firebase.google.com/u/0/
 
-- in `firebase.json`
+- Enable Authentication (email and password), Firestore and Hosting
+
+4. Add your firebase project's credentials to the code (or you can do this using the firebase cli helper?)
+
+- in `/.firebaserc`, set the `projects.default` field to your firebase project name.
+- in `/src/firebaseConfig.js`, add your firebase project config (these are found in the [Firebase console website](https://console.firebase.google.com/), in your project, in Settings > General, then scroll down to "Your apps")
