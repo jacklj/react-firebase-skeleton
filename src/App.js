@@ -10,14 +10,14 @@ import 'firebase/database';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import AuthService from 'services/AuthService';
 import { selectUid } from 'redux/auth/selectors';
+import { userUpdated } from 'redux/user/slice';
+import { loggedIn, loggedOut } from 'redux/auth/slice';
 import Header from 'components/Header';
 import LogIn from 'pages/LogIn';
 import CreateAccount from 'pages/CreateAccount';
 import Dashboard from 'pages/Dashboard';
 import Settings from 'pages/Settings';
-import { userUpdated } from 'redux/user/slice';
 
 const TopLevelContainer = styled.div`
   min-height: 100vh;
@@ -35,13 +35,24 @@ function App() {
   const isLoggedIn = !!uid;
 
   useEffect(() => {
-    AuthService.subscribeToAuthStateChangeListener();
-    return () => AuthService.unsubscribeFromAuthStateChangeListener();
-  }, []);
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        const { displayName: name, email, uid } = user;
+        dispatch(loggedIn({ uid, name, email }));
+      } else {
+        // User is signed out.
+        dispatch(loggedOut());
+      }
+    });
+
+    return () => unsubscribe && unsubscribe();
+  }, [dispatch]);
 
   useEffect(() => {
     let unsubscribe;
-    if (uid) {
+    const isLoggedIn = !!uid;
+    if (isLoggedIn) {
       //  subscribe to user record
       unsubscribe = firebase
         .firestore()
