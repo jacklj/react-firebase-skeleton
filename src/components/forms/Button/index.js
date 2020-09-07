@@ -2,13 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LoadingSpinner from './LoadingSpinner';
-
-const Colours = {
-  disabled: '#666',
-  normal: '#333',
-  hover: 'rgb(222,84,89)',
-  active: 'rgb(222,84,89)',
-};
+import Colours from 'services/colours';
 
 const BasicButton = styled.button`
   height: 50px;

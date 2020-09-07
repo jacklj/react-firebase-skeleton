@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import { selectUid } from 'redux/auth/selectors';
 import { selectName } from 'redux/user/selectors';
 import HeaderButton from './HeaderButton';
+import Colours from 'services/colours';
 
 const Container = styled.header`
   flex: 0 1 auto; // so it doesn't look too bad on safari
@@ -42,8 +43,8 @@ const TitleText = styled.div`
   }
 `;
 
-const Yellow = styled.span`
-  color: #ffbf00;
+const Highlight = styled.span`
+  color: ${Colours.hover};
 `;
 
 const UserName = styled.div`
@@ -83,7 +84,8 @@ const Header = () => {
     <>
       <Container>
         <TitleText>
-          <Yellow>r</Yellow>eact <Yellow>f</Yellow>irebase <Yellow>s</Yellow>
+          <Highlight>r</Highlight>eact <Highlight>f</Highlight>irebase{' '}
+          <Highlight>s</Highlight>
           keleton
         </TitleText>
 

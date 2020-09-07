@@ -29,7 +29,7 @@ const Spinner = styled.div`
   height: 22px;
 
   border-radius: 50%;
-  background: #ffcf40;
+  background: #111;
   animation: ${spinning} 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 `;
 

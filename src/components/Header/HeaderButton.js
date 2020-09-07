@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Colours = {
-  disabled: 'rgb(180, 176, 85)',
-  normal: '#ffdc73',
-  hover: '#ffcf40',
-  active: '#ffbf00',
-};
+import Colours from 'services/colours';
 
 const Container = styled.div`
   flex-shrink: 0;
