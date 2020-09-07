@@ -1,4 +1,4 @@
-# react-firebase skeleton
+# ☠️ react-firebase skeleton
 
 Quickly start new web app projects using this skeleton React.js frontend + serverless backend with Firebase Authentication, Firestore and Hosting.
 

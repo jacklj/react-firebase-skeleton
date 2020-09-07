@@ -37,32 +37,20 @@ const BasicButton = styled.button`
   ${({ isDisabled }) =>
     isDisabled &&
     `
-  color: ${Colours.disabled};
-  border-color: ${Colours.disabled};
-  text-shadow: none;
-  text-decoration: line-through;
-  text-decoration-thickness: 3px; // mainly for firefox, otherwise strikethrough line looks too small (1px thick)
-`}
+      color: ${Colours.disabled};
+      border-color: ${Colours.disabled};
+      text-decoration: line-through;
+      text-decoration-thickness: 3px; // mainly for firefox, otherwise strikethrough line looks too small (1px thick)
+    `}
 
   &:hover {
-    background-color: ${Colours.hover};
-
-    ${({ isDisabled }) =>
-      isDisabled &&
-      `
-      background-color: ${Colours.disabled};
-  `}
+    background-color: ${({ isDisabled }) =>
+      isDisabled ? Colours.disabled : Colours.hover};
   }
 
   &:active {
-    background-color: ${Colours.hover};
-
-    ${({ isDisabled }) =>
-      isDisabled &&
-      `
-      background-color: ${Colours.disabled};
-
-  `}
+    background-color: ${({ isDisabled }) =>
+      isDisabled ? Colours.disabled : Colours.hover};
   }
 `;
 
