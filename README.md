@@ -1,20 +1,22 @@
 # ☠️ react-firebase skeleton
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 A basic React.js Single Page App frontend + serverless backend with Firebase Authentication, Firestore and Hosting.
 
 Good for quickly starting new web app projects. 🙃
 
 #### Includes:
 
-- Account creation and log in pages
+- **Account creation and log in pages**
+- **redux store subscribed to Auth and Firestore state changes**
 - basic responsive UI components: header, form elements, page container
 - routing: `react-router-dom`
 - state management: `redux` + `@reduxjs/toolkit`
-- redux store updates automatically to Auth and Firestore state changes (see subscriptions in `src/App.js`).
 - CSS-in-JS: `styled-components`
 - absolute imports (~~`'../../components/Button'`~~ -> `'components/Button'`)
 
-## Installation
+## 🚀 Installation
 
 ### 1. clone repo and install node modules
 
@@ -40,13 +42,13 @@ firebase login
 - in `/.firebaserc`, set the `projects.default` field to your firebase project name (alternatively, you can do this using the firebase cli helper `firebase init`)
 - in `/src/firebaseConfig.js`, add your firebase project config (these are found in the [Firebase console](https://console.firebase.google.com/), in Your-project > Settings > General, then scroll down to "Your apps")
 
-## Run frontend locally
+## 🏕 Run frontend locally
 
 ```bash
 yarn start
 ```
 
-## Deploy
+## 🦾 Deploy
 
 ```bash
 yarn deploy # does prod build then deploys it to Firebase Hosting
