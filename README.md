@@ -2,15 +2,16 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-A basic React.js Single Page App frontend + serverless backend with Firebase Authentication, Firestore and Hosting.
+A basic React.js (Create React App) frontend + serverless backend with Firebase Authentication, Firestore and Hosting.
 
-Good for quickly starting new web app projects. 🙃
+Good for quickly starting new web projects. 🙃
 
 #### Includes:
 
 - **Account creation and log in pages**
 - **redux store subscribed to Auth and Firestore state changes**
 - basic responsive UI components: header, form elements, page container
+- Create React App
 - routing: `react-router-dom`
 - state management: `redux` + `@reduxjs/toolkit`
 - CSS-in-JS: `styled-components`
